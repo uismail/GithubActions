@@ -1,4 +1,4 @@
-name: 'Run Unit Tests Usama Ismail'
+name: 'Run App Usama Ismail'
 
 on: [push, pull_request]
 
