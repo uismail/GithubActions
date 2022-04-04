@@ -1,4 +1,4 @@
-name: 'Run App Usama Ismail'
+name: 'Run Unit Tests Usama Ismail'
 
 on: [push, pull_request]
 
@@ -16,4 +16,4 @@ jobs:
       - name: Install dependencies
         run: dotnet restore GithubActions.sln
       - name: Build
-        run: msbuild /p:Configuration=Release GithubActions.sln
+        run:  mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./Tests/bin/Release/Tests.dll
