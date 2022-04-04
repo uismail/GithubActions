@@ -16,4 +16,6 @@ jobs:
       - name: Install dependencies
         run: dotnet restore GithubActions.sln
       - name: Build
-        run:  mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./Tests/bin/Release/Tests.dll
+        run: msbuild /p:Configuration=Release GithubActions.sln
+      - name: Run Unit Tests
+        run: mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./Tests/bin/Release/Tests.dll
