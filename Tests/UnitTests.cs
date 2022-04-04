@@ -35,7 +35,7 @@ namespace GithubActionsLab
         [Test]
         public void Subtract_Valid()
         {
-            Assert.AreEqual(3, Program.Subtract("5", "2"));
+            Assert.AreEqual(2, Program.Subtract("5", "2"));
             Assert.AreEqual(5, Program.Subtract("7", "2"));
             Assert.AreEqual(12, Program.Subtract("22", "10"));
         }
@@ -107,7 +107,7 @@ namespace GithubActionsLab
         }
         //power
         [Test]
-        public void _Valid()
+        public void Power_Valid()
         {
             Assert.AreEqual(4, Program.Power("2", "2"));
             Assert.AreEqual(27, Program.Power("3", "2"));
@@ -115,7 +115,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void _InValid()
+        public void Power_InValid()
         {
             Assert.Throws<FormatException>(() => Program.Power("1", "a"));
             Assert.Throws<FormatException>(() => Program.Power("a", "1"));
@@ -124,7 +124,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void _Null()
+        public void Power_Null()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
